@@ -16,3 +16,18 @@
 - `.lintstagedrc` and `.huskyrc.js`: Added these file for running linters (`npm run lint`) before adding files. The flow is:
   - `pre-commit` hooks is added in `.huskyrc.js` that runs `lint-staged` command.
   - `.lintstagedrc` config file for `lint-staged` defines the commands to run.
+
+## Notes
+
+### Why not using `commitizen` instead of `commitlint`.
+
+Tried `commitizen` with `husky` by adding `pre-commit-msg` hook to husky config. In order to commit changes, one would do
+
+`git commit --message "some message"`
+
+Doing this would trigger
+
+  - `lint-staged`
+  - `pre-commit-message`
+
+But problem we were facing is if we exit while `git cz` runs, your commit still gets committed.

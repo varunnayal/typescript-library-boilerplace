@@ -1,5 +1,5 @@
 module.exports = {
-  '*.{js,ts}': [
+  'src/**/*.{js,ts}': [
     // Run linters and fix files
     'npm run lint:fix',
     // Add the update file again in the git
