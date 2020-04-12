@@ -5,6 +5,27 @@
 - Run `nvm use` to use the node version being used for development
 - Ensure `$PATH` variable contains `./node_modules/.bin` path to use local `tsc` and other dependand binary being installed by `npm i`.
 
+## TODO
+
+[ ]  Package release workflow including
+
+For release workflow we would want to:
+
+- Generate `CHANGELOG.md`
+- Autoamtically hanles semantic versioning, for a version `<major>`.`<minor>`.`<patch>`
+  - Updates `major` when there are breaking changes.(Having `BREAKING CHANGE:` text in `body` or `footer` section)
+  - Updates `minor` for new features.(`feat:` commit)
+  - Updates `patch` for bug fixes.(`fix:` commit)
+- Generates relase notes
+- Integrate with CI/CD pipeline, if any
+- Publish on various channels like [GitHub Releae](https://help.github.com/en/github/administering-a-repository/about-releases) or `npm`.
+
+Choices we have for realase workflow:
+
+- `auto-changelog`: Just generated changelog. Supports custom changelog templates.
+- `semantic-release`: It is a fully automated library/system for versioning, changelog generation, git tagging, and publishing to the npm registry.
+- `standard-version`: It handles the versioning, changelog generation, and git tagging for you without automatic pushing (to GitHub) or publishing (to an npm registry). Use of standard-version only affects your local git repo - it doesn't affect remote resources at all. After you run standard-version, you still have to ability to review things and correct mistakes if you want to. [Diff with semantic-release](https://github.com/conventional-changelog/standard-version/issues/22).
+
 ## Files
 
 - `.nvmrc`: To handle the node version being used. When in repo for the first time, run `nvm use`.
