@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "typescript": "^3.8.3"
   }
 }

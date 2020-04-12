@@ -8,3 +8,4 @@
 ## Files
 
 - `.nvmrc`: To handle the node version being used. When in repo for the first time, run `nvm use`.
+- `tsconfig.json`: TS configuratio file.
