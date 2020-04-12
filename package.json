@@ -5,22 +5,29 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "test": "./node_modules/.bin/nyc mocha src/**/*.spec.ts",
+    "cov": "./node_modules/.bin/nyc ./node_modules/.bin/mocha src/**/*.spec.ts",
     "prebuild": "rm -rf lib",
     "build": "./node_modules/.bin/tsc -p .",
-    "prepublish": "npm run test && npm run build -- --clean",
+    "prepublish": "npm run cov && npm run build -- --clean",
     "publish": "echo \"TODO\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
-    "dev": "./node_modules/.bin/tsc -p . -w"
+    "dev": "./node_modules/.bin/tsc -p . -w",
+    "dev:test:mac": "npm run test && open TestResults/mochawesome.html",
+    "dev:cov:mac": "npm run cov && open TestResults/mochawesome.html && open coverage/index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.1",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-typescript": "^7.2.1",
     "eslint-config-prettier": "^6.10.1",
@@ -28,7 +35,12 @@
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.1.3",
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0",
+    "nyc": "^15.0.1",
     "prettier": "^2.0.4",
+    "sinon": "^9.0.2",
+    "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   }
 }

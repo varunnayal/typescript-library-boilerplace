@@ -13,9 +13,20 @@ To run in watch mode use
 
 All the unit test must be written in file whose name matches `src/**/*.spec.ts`. These files has been ignored by `tsconfig.json` file.
 
+Following scripts can be used:
+
+- `npm run test`: To run test using `mocha` suite.
+- `npm run cov`: To run tests and generate code coverage reports.
+- `npm run dev:test:mac` and `npm run dev:cov:mac` to run test or coverage and open html files.
+
+### Run current test file in VSCode
+
+Use `Mocha Current File` launch configuration to run current `*.spec.ts` file for testing.
+
 ## TODO
 
-[ ]  Add testing famework
+[x]  Add testing famework
+
 [ ]  Package release workflow including
 For release workflow we would want to:
 
