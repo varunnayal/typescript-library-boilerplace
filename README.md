@@ -11,4 +11,5 @@
 - `tsconfig.json`: TS configuratio file.
 - `.eslintrc.js` and `.eslintignore`: ESLint configuration files.
   - Added scripts `npm run lint` and `npm run lint:fix`. The latter command fixes the `ts` and `js` files. For example `const x: number = 123` will be converted to `const x = 123` as `number` is redundant here.
-- `.prettierrc`: Adding prettier configuration using Prettier.
+- `.prettierrc`: Adding prettier configuration using Prettier. See [configure prettier in vs code](https://glebbahmutov.com/blog/configure-prettier-in-vscode/), [eslint and prettier in TS](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project)
+- `.vscode/settings.json`: Added to maintain VSCode settings across all users. Ensure `prettier` extension is installed.
