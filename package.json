@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "A boilerplate for writing library in typescript",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "./node_modules/.bin/tsc -p .",
+    "prepublish": "npm run test && npm run build -- --clean",
+    "publish": "echo \"TODO\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore --ext .js,.ts",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "dev": "./node_modules/.bin/tsc -p . -w"
   },
   "author": "",
   "license": "ISC",
