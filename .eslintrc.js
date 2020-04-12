@@ -1,3 +1,6 @@
+// eslint ignore file:
+//  ignore file is defined in "npm run lint" script as .gitignore.
+//    If a custom is required, then add `.eslintignore` and remove `--ignore-path` in `npm run lint` command.
 module.exports = {
   env: {
     node: true,
