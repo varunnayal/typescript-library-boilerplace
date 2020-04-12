@@ -16,6 +16,7 @@
 - `.lintstagedrc` and `.huskyrc.js`: Added these file for running linters (`npm run lint`) before adding files. The flow is:
   - `pre-commit` hooks is added in `.huskyrc.js` that runs `lint-staged` command.
   - `.lintstagedrc` config file for `lint-staged` defines the commands to run.
+- airbnb eslint configuration integration. See [Airbnb JS Style Guide](https://github.com/airbnb/javascript).
 
 ## Notes
 
@@ -27,7 +28,7 @@ Tried `commitizen` with `husky` by adding `pre-commit-msg` hook to husky config.
 
 Doing this would trigger
 
-  - `lint-staged`
-  - `pre-commit-message`
+- `lint-staged`
+- `pre-commit-message`
 
 But problem we were facing is if we exit while `git cz` runs, your commit still gets committed.
