@@ -1,0 +1,11 @@
+{
+  "name": "slice-library-express",
+  "version": "1.0.0",
+  "description": "Slice library for sending sucessful or error response",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
