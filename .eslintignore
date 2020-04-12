@@ -1,0 +1,2 @@
+# Disable ESLint compiling for below matching rules
+node_modules
