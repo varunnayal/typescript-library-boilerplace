@@ -73,3 +73,6 @@ Doing this would trigger
 - `pre-commit-message`
 
 But problem we were facing is if we exit while `git cz` runs, your commit still gets committed.
+
+1
+
