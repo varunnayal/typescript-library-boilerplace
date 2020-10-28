@@ -12,15 +12,15 @@ module.exports = {
             },
         ],
         [
-            '@semantic-release/npm',
-            {
-                pkgRoot: 'dist',
-            },
-        ],
-        [
             '@semantic-release/github',
             {
                 assets: [{ path: 'dist/*', label: 'source' }],
+            },
+        ],
+        [
+            '@semantic-release/npm',
+            {
+                pkgRoot: 'dist',
             },
         ],
     ],
