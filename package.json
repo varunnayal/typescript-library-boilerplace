@@ -1,6 +1,6 @@
 {
   "name": "@varunnayal/typescript-library-boilerplace",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "A boilerplate for writing library in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,8 +13,6 @@
     "cov": "./node_modules/.bin/nyc ./node_modules/.bin/mocha src/**/*.spec.ts",
     "prebuild": "rm -rf dist",
     "build": "./node_modules/.bin/tsc -p .",
-    "postbuild.old": "cp -r package.json dist/. && cp -r package-lock.json dist/.",
-    "postbuild": "cp package*json dist/.",
     "prepublishOnly.deprecated": "npm run cov && npm run build -- --clean",
     "publish": "echo \"TODO\"",
     "format": "./node_modules/.bin/prettier --write **/*.ts",
