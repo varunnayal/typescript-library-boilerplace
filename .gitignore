@@ -1,3 +1,10 @@
+### Custom Entries ###
+
+# Build directory(tsconfig, package.json)
+/lib/**/*
+
+# Mocha Reports
+testresults
 
 # Created by https://www.gitignore.io/api/vim,node,webstorm,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=vim,node,webstorm,visualstudiocode

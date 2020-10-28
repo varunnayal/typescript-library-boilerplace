@@ -1,11 +1,53 @@
 {
-  "name": "slice-library-express",
+  "name": "@buddy-git/typescript-library-boilerplace",
   "version": "1.0.0",
-  "description": "Slice library for sending sucessful or error response",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A boilerplate for writing library in typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Buddy-Git/typescript-library-boilerplace"
   },
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "test": "./node_modules/.bin/nyc mocha test/**/*.ts",
+    "cov": "./node_modules/.bin/nyc ./node_modules/.bin/mocha src/**/*.spec.ts",
+    "prebuild": "rm -rf dist",
+    "build": "./node_modules/.bin/tsc -p .",
+    "prepublishOnly": "npm run cov && npm run build -- --clean",
+    "publish": "echo \"TODO\"",
+    "format": "./node_modules/.bin/prettier --write **/*.ts",
+    "format-check": "./node_modules/.bin/prettier --check **/*.ts",
+    "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore --ext .js,.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "dev": "./node_modules/.bin/tsc -p . -w",
+    "dev:test": "npm run test && open coverage/testresults/mochawesome.html",
+    "dev:cov": "npm run cov && open coverage/testresultsmochawesome.html && open coverage/index.html",
+    "all": "npm run format && npm run lint && npm test && npm run build"
+  },
+  "author": "Varun Nayal",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@types/chai": "4.2.14",
+    "@types/mocha": "8.0.3",
+    "@types/node": "14.14.2",
+    "@typescript-eslint/eslint-plugin": "4.5.0",
+    "@typescript-eslint/parser": "4.5.0",
+    "chai": "4.2.0",
+    "eslint": "7.12.1",
+    "eslint-config-airbnb-typescript": "12.0.0",
+    "eslint-config-prettier": "6.14.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "husky": "4.3.0",
+    "lint-staged": "10.4.2",
+    "mocha": "8.2.0",
+    "mochawesome": "6.1.1",
+    "nyc": "15.1.0",
+    "prettier": "2.1.2",
+    "sinon": "9.2.0",
+    "ts-node": "9.0.0",
+    "typescript": "4.0.5"
+  }
 }

@@ -1,0 +1,30 @@
+name: Send SMS
+on:
+    push:
+        branches:
+            - master
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: 'registry setup'
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+                  registry-url: https://npm.pkg.github.com/
+                  scope: '@varunnayal'
+            - name: install
+              run: npm ci
+            - name: build
+              run: npm run build
+            # - name: semantic-release
+            #   run: npx semantic-release --debug
+            # - name: Set npm registry
+            #   run: npm config set @deepanshu195:registry https://npm.pkg.github.com
+            - name: semantic-release
+              run: npx semantic-release --debug
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
