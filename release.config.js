@@ -12,14 +12,14 @@ module.exports = {
             },
         ],
         [
-            '@semantic-release/npm',
-            { pkgRoot: 'dist' },
-        ],
-        [
             '@semantic-release/github',
             {
                 assets: ['package.json', 'npm-shrinkwrap.json'],
             },
+        ],
+        [
+            '@semantic-release/npm',
+            { pkgRoot: 'dist' },
         ],
     ],
 };
