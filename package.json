@@ -25,7 +25,7 @@
     "all": "npm run format && npm run lint && npm test && npm run build"
   },
   "author": "Varun Nayal",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
