@@ -19,10 +19,6 @@ jobs:
             - name: build
               if: success()
               run: npm run build
-            - name: cat
-              run: cat  /home/runner/work/_temp/.npmrc
-            - name: echo
-              run: node -e "console.log(\"${{ secrets.GITHUB_TOKEN }}\".length, \"${{ secrets.GITHUB_TOKEN }}\")"
             - name: semantic-release
               if: success()
               env:
