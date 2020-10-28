@@ -1,12 +1,12 @@
 {
-  "name": "@buddy-git/typescript-library-boilerplace",
+  "name": "@varunnayal/typescript-library-boilerplace",
   "version": "1.0.0",
   "description": "A boilerplate for writing library in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Buddy-Git/typescript-library-boilerplace"
+    "url": "https://github.com/varunnayal/typescript-library-boilerplace"
   },
   "scripts": {
     "test": "./node_modules/.bin/nyc mocha test/**/*.ts",
