@@ -22,11 +22,11 @@ jobs:
             - name: cat
               run: cat  /home/runner/work/_temp/.npmrc
             - name: echo
-              run: echo ${{ secrets.GITHUB_TOKEN }}
+              run: node -e "console.log(\"${{ secrets.GITHUB_TOKEN }}\".length, \"${{ secrets.GITHUB_TOKEN }}\")"
             - name: semantic-release
               if: success()
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: npx semantic-release --debug
+              run: ncat  /home/runner/work/_temp/.npmrc && px semantic-release --debug
