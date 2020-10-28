@@ -29,4 +29,4 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: ncat  /home/runner/work/_temp/.npmrc && px semantic-release --debug
+              run: cat /home/runner/work/_temp/.npmrc && px semantic-release --debug
