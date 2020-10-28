@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/varunnayal/typescript-library-boilerplace/compare/v1.1.0...v1.2.0) (2020-10-28)
+
+
+### Features
+
+* **ci:** npm postpulish ([d4ded22](https://github.com/varunnayal/typescript-library-boilerplace/commit/d4ded22a6d7bfeb5192071bc7b02ea63eca8f403))
+
 # [1.1.0](https://github.com/varunnayal/typescript-library-boilerplace/compare/v1.0.0...v1.1.0) (2020-10-28)
 
 
