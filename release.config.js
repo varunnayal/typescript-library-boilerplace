@@ -12,15 +12,13 @@ module.exports = {
             },
         ],
         [
-            '@semantic-release/github',
-            {
-                assets: [{ path: 'dist/*', label: 'source' }],
-            },
+            '@semantic-release/npm',
+            { pkgRoot: 'dist' },
         ],
         [
-            '@semantic-release/npm',
+            '@semantic-release/github',
             {
-                pkgRoot: 'dist',
+                assets: ['package.json', 'npm-shrinkwrap.json'],
             },
         ],
     ],

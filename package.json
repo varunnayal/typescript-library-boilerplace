@@ -14,6 +14,7 @@
     "prebuild": "rm -rf dist",
     "build": "./node_modules/.bin/tsc -p .",
     "prepublishOnly": "npm run cov && npm run build -- --clean",
+    "postpublish": "cp -r dist/package.json . && cp -r dist/package-lock.json .",
     "publish": "echo \"TODO\"",
     "format": "./node_modules/.bin/prettier --write **/*.ts",
     "format-check": "./node_modules/.bin/prettier --check **/*.ts",
