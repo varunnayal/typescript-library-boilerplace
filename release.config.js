@@ -41,7 +41,7 @@ module.exports = {
         [
             '@semantic-release/github',
             {
-                assets: ['pack/*.tgz'],
+                assets: ['pack/*.tgz', 'package.json', 'package-lock.json'],
             },
         ],
         [
