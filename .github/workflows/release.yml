@@ -25,4 +25,4 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: cat /home/runner/work/_temp/.npmrc && npx semantic-release --debug
+              run: npx semantic-release --debug
