@@ -13,6 +13,7 @@
     "cov": "./node_modules/.bin/nyc ./node_modules/.bin/mocha src/**/*.spec.ts",
     "prebuild": "rm -rf dist",
     "build": "./node_modules/.bin/tsc -p .",
+    "postbuild": "cp package*json dist/.",
     "format": "./node_modules/.bin/prettier --write **/*.ts",
     "format-check": "./node_modules/.bin/prettier --check **/*.ts",
     "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore --ext .js,.ts",
