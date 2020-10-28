@@ -18,10 +18,6 @@ jobs:
               run: npm ci
             - name: build
               run: npm run build
-            # - name: semantic-release
-            #   run: npx semantic-release --debug
-            # - name: Set npm registry
-            #   run: npm config set @deepanshu195:registry https://npm.pkg.github.com
             - name: semantic-release
               run: npx semantic-release --debug
               env:
