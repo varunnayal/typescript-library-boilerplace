@@ -11,15 +11,7 @@ module.exports = {
                 message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
             },
         ],
-        [
-            '@semantic-release/npm',
-            { pkgRoot: 'dist' },
-        ],
-        [
-            '@semantic-release/github',
-            {
-                assets: ['package.json', 'package-lock.json'],
-            },
-        ],
+        ['@semantic-release/npm', { pkgRoot: 'dist', tarballDir: 'pack' }],
+        ['@semantic-release/github', { assets: [{ path: 'pack/*.tgz', label: 'source code' }] }],
     ],
 };
