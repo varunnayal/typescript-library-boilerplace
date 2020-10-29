@@ -1,4 +1,4 @@
-name: Send SMS
+name: TS Boilerplate
 on:
     push:
         branches:
