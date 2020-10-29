@@ -1,6 +1,6 @@
 # TS Boilerplate
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![master](https://github.com/varunnayal/typescript-library-boilerplace/workflows/Release%20WFA/badge.svg)](https://github.com/varunnayal/typescript-library-boilerplace/actions?query=workflow%3A%22Release+WFA%22) [![](https://img.shields.io/github/v/release/varunnayal/typescript-library-boilerplace)](https://github.com/varunnayal/typescript-library-boilerplace/releases)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) ![Release WFA](https://github.com/varunnayal/typescript-library-boilerplace/workflows/Release%20WFA/badge.svg?branch=master) [![](https://img.shields.io/github/v/release/varunnayal/typescript-library-boilerplace)](https://github.com/varunnayal/typescript-library-boilerplace/releases)
 
 ## Development
 
