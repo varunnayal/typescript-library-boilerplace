@@ -8,6 +8,6 @@ export function fun2(): string {
 
 export class Sample {
     static async run(): Promise<number> {
-        return 2;
+        return 1;
     }
 }
