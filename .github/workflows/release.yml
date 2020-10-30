@@ -16,7 +16,7 @@ jobs:
             - name: install
               run: npm ci
             - name: test
-              run: npm test
+              run: npm test -- -R min
             - name: build
               if: success()
               run: npm run build
