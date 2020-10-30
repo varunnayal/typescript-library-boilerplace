@@ -15,6 +15,8 @@ jobs:
                   node-version: 12
             - name: install
               run: npm ci
+            - name: test
+              run: npm test
             - name: build
               if: success()
               run: npm run build
