@@ -14,6 +14,6 @@ describe('Function call', () => {
 describe('Sample Class', async () => {
     it('run', async () => {
         const data = await Sample.run();
-        assert(data === 2, 'Sample.run failed');
+        assert(data === 1, 'Sample.run failed');
     });
 });
