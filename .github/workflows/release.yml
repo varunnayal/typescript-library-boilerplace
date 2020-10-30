@@ -3,6 +3,7 @@ on:
     push:
         branches:
             - master
+            - beta
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -12,10 +13,10 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: 12
-                  registry-url: https://npm.pkg.github.com
-                  scope: '@varunnayal'
             - name: install
               run: npm ci
+            - name: test
+              run: npm test
             - name: build
               if: success()
               run: npm run build

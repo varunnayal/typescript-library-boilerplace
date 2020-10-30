@@ -2,15 +2,15 @@
   "name": "@varunnayal/typescript-library-boilerplace",
   "version": "1.1.0",
   "description": "A boilerplate for writing library in typescript",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/varunnayal/typescript-library-boilerplace"
   },
   "scripts": {
     "test": "./node_modules/.bin/nyc mocha test/**/*.ts",
-    "cov": "./node_modules/.bin/nyc ./node_modules/.bin/mocha src/**/*.spec.ts",
+    "cov": "./node_modules/.bin/nyc ./node_modules/.bin/mocha test/**/*.ts",
     "prebuild": "rm -rf dist",
     "build": "./node_modules/.bin/tsc -p .",
     "postbuild": "cp package*json dist/.",
@@ -19,14 +19,15 @@
     "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "dev": "./node_modules/.bin/tsc -p . -w",
-    "dev:test": "npm run test && open coverage/testresults/mochawesome.html",
-    "dev:cov": "npm run cov && open coverage/testresultsmochawesome.html && open coverage/index.html",
+    "dev:test": "npm run test && open coverage/mochawesome/mochawesome.html",
+    "dev:cov": "npm run cov && open coverage/index.html && open coverage/mochawesome/mochawesome.html",
     "all": "npm run format && npm run lint && npm test && npm run build"
   },
   "author": "Varun Nayal",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/",
+    "scope": "@varunnayal"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
